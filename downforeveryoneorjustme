@@ -25,7 +25,6 @@ class DownForEveryone(object):
     def __init__(self):
         self.parse_url()
         self.is_url()
-        self.response = urllib.urlopen(self.base_url+self.url).read()
         self.get_answer(
             urllib.urlopen(self.base_url+self.url).read()
         )
@@ -52,7 +51,6 @@ class DownForEveryone(object):
             print '\033[1;31m{} {} {}\033[1;m'.format(down, self.url, 'looks down from here.')
         else:
             print 'Error to find the answer'
-            sys.exit(0)
 
     def usage(self):
         print 'Usage:'
